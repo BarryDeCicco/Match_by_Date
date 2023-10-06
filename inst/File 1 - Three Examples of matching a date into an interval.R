@@ -6,6 +6,8 @@ library(fuzzyjoin)
 library(powerjoin)
 library(sqldf)
 
+#### EXAMPLE 1              ####
+
 # From:  https://stackoverflow.com/questions/71860379/r-dplyr-join-tables-based-on-overlapping-date-time-intervals
 # Jon Spring's answer:
 
@@ -38,6 +40,8 @@ have_item_time %>%
                          "timestamp" = "stop_time"),
                   match_fun = list(`>=`, `<=`))
 
+#### EXAMPLE 2              ####
+
 # From:  https://stackoverflow.com/questions/71860379/r-dplyr-join-tables-based-on-overlapping-date-time-intervals
 # moodymudskipper's answer:
 
@@ -48,6 +52,7 @@ power_left_join(
   keep = "left")
 
 
+#### EXAMPLE 3              ####
 # From: https://community.rstudio.com/t/tidy-way-to-range-join-tables-on-an-interval-of-dates/7881
 
 suppressPackageStartupMessages(library(tidyverse))
